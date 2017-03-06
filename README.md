@@ -11,5 +11,6 @@ Basic project created for Angular2 training.
  
  Prod environment
  ```bash
+  webpack -p
   npm run server:prod
   ```
