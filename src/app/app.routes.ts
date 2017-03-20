@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home';
+import { CoursesComponent } from './pages/courses/courses.component';
+import { CourseComponent } from './pages/courses/course/course.component';
 import { NoContentComponent } from './pages/no-content';
 
 import { DataResolver } from './app.resolver';
 
 export const ROUTES: Routes = [
-  { path: '',      component: HomeComponent },
-  { path: 'home',  component: HomeComponent },
-  { path: 'detail', loadChildren: './+detail#DetailModule'},
-  { path: 'barrel', loadChildren: './+barrel#BarrelModule'},
+  { path: '',      component: CoursesComponent },
+  { path: 'courses',  component: CoursesComponent },
+  { path: 'course',  component: CourseComponent },
   { path: '**',    component: NoContentComponent },
 ];

@@ -24,9 +24,11 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { HomeComponent } from './home';
+import { CoursesComponent } from './pages/courses';
+import { CourseComponent } from './pages/courses/course';
 import { NoContentComponent } from './pages/no-content';
-import { XLargeDirective } from './home/x-large';
+import { FooterComponent } from './shared/components/footer';
+import { HeaderComponent } from './shared/components/header';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -50,9 +52,11 @@ type StoreType = {
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
-    HomeComponent,
+    CoursesComponent,
+    CourseComponent,
+    FooterComponent,
     NoContentComponent,
-    XLargeDirective
+    HeaderComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,

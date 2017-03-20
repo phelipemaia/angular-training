@@ -1,0 +1,12 @@
+<div>
+  <form (ngSubmit)="findCourse(valueToFind)" autocomplete="off">
+
+    <input
+            [value]="valueToFind"
+            (input)="valueToFind = $event.target.value"
+            placeholder=""
+            autofocus>
+
+    <button>Find</button>
+  </form>
+</div>
