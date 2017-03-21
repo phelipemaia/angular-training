@@ -1,1 +1,11 @@
-<h2>Add item</h2>
+<div class="course-container">
+    <div class="course-header">
+        <span class="course-date">{{course.startDate}}</span>
+        <p> Video course {{course.id}} {{course.duration}} min </p>
+    </div>
+    <p class="description"> {{course.description}} </p>
+    <div class="buttons">
+        <button>Edit course</button> <br />
+        <button (click)="deleteCourse(course.id)" >Delete</button>
+    </div>
+</div>

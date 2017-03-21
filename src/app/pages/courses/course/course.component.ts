@@ -1,21 +1,24 @@
 import {
     Component,
-    OnInit
+    Input,
+    Output,
+    EventEmitter
 } from '@angular/core';
 
-import { AppState } from '../../../app.service';
+import { Course } from '../../../shared/components/models/course';
 
 @Component({
-    selector: 'home',  // <home></home>
+    selector: 'course',
+    styleUrls: ['./course.component.css'],
     templateUrl: './course.component.html'
 })
-export class CourseComponent implements OnInit {
-    public localState = { value: '' };
-    constructor(
-        public appState: AppState
-    ) {}
+export class CourseComponent {
+    @Input() course: Course;
+    @Input('master') masterName: string;
 
-    public ngOnInit() {
-        console.log('courses');
+    @Output() onDelete = new EventEmitter<number>();
+
+    deleteCourse(id: number) {
+        this.onDelete.emit(id);
     }
 }

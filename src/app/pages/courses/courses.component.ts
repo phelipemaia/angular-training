@@ -4,23 +4,24 @@ import {
 } from '@angular/core';
 
 import { AppState } from '../../app.service';
+import { COURSES } from '../../shared/components/models/course';
 
 @Component({
     selector: 'courses',
+    styleUrls: ['./courses.component.css'],
     templateUrl: './courses.component.html'
 })
-export class CoursesComponent implements OnInit {
+export class CoursesComponent {
     public valueToFind = '';
-    constructor(
-        public appState: AppState
-    ) {}
-
-    public ngOnInit() {
-        console.log('courses');
-    }
+    courses = COURSES;
+    master: string = 'Master';
 
     public findCourse(value: string) {
         console.log('find', value);
         this.valueToFind = '';
+    }
+
+    onDelete(id: number) {
+        console.log("Delete " + id);
     }
 }

@@ -1,12 +1,16 @@
-<div>
-  <form (ngSubmit)="findCourse(valueToFind)" autocomplete="off">
+<div class="content">
+  <div class="toolbox">
+    <form (ngSubmit)="findCourse(valueToFind)" autocomplete="off">
 
-    <input
-            [value]="valueToFind"
-            (input)="valueToFind = $event.target.value"
-            placeholder=""
-            autofocus>
+      <input
+              [value]="valueToFind"
+              (input)="valueToFind = $event.target.value"
+              placeholder=""
+              autofocus>
 
-    <button>Find</button>
-  </form>
+      <button>Find</button>
+    </form>
+    <button class="add-course">Add</button>
+  </div>
+  <course *ngFor="let course of courses" [course]="course" [master]="master" (onDelete)="onDelete($event)"></course>
 </div>

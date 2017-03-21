@@ -1,0 +1,9 @@
+.add-course {
+    float: right;
+    top: -20px;
+    position: relative;
+}
+
+.content, .toolbox {
+    margin-bottom: 10px;
+}
