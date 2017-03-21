@@ -14,7 +14,6 @@ import { COURSES } from '../../shared/components/models/course';
 export class CoursesComponent {
     public valueToFind = '';
     courses = COURSES;
-    master: string = 'Master';
 
     public findCourse(value: string) {
         console.log('find', value);

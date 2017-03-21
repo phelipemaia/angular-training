@@ -14,11 +14,10 @@ import { Course } from '../../../shared/components/models/course';
 })
 export class CourseComponent {
     @Input() course: Course;
-    @Input('master') masterName: string;
 
     @Output() onDelete = new EventEmitter<number>();
 
-    deleteCourse(id: number) {
-        this.onDelete.emit(id);
+    deleteCourse() {
+        this.onDelete.emit(this.course.id);
     }
 }

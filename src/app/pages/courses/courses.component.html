@@ -12,5 +12,5 @@
     </form>
     <button class="add-course">Add</button>
   </div>
-  <course *ngFor="let course of courses" [course]="course" [master]="master" (onDelete)="onDelete($event)"></course>
+  <course *ngFor="let course of courses" [course]="course" (onDelete)="onDelete($event)"></course>
 </div>
