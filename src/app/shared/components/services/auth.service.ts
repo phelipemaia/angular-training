@@ -5,7 +5,7 @@ export class AuthService {
     login() : any {
         let user = {
             username: 'Phelipe',
-            toke: 'tokenTest'
+            token: 'tokenTest'
         };
         localStorage.setItem('user', JSON.stringify(user));
         return user;

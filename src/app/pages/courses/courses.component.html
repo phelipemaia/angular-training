@@ -1,4 +1,5 @@
-<div class="content">
+<login *ngIf="!isAuthenticated"></login>
+<div *ngIf="isAuthenticated" class="content">
   <div class="toolbox">
     <form (ngSubmit)="findCourse(valueToFind)" autocomplete="off">
 

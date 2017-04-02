@@ -5,20 +5,24 @@ import {
 
 import { AppState } from '../../app.service';
 //import { COURSES } from '../../shared/models/course';
-import { CoursesService } from './courses.service'
+import { CoursesService } from './courses.service';
+import { AuthService } from '../../shared/components/services/auth.service';
 
 @Component({
     selector: 'courses',
     styleUrls: ['./courses.component.css'],
     templateUrl: './courses.component.html',
-    providers: [CoursesService]
+    providers: [CoursesService, AuthService]
 })
 export class CoursesComponent {
     public valueToFind = '';
     public courses;
+    public isAuthenticated = false;
 
-    constructor(coursesService: CoursesService) {
+    constructor(coursesService: CoursesService, authServices: AuthService) {
         this.courses = coursesService.getCourses();
+        this.isAuthenticated = authServices.isAuthenticated();
+        console.log(this.isAuthenticated)
     }
 
     public findCourse(value: string) {

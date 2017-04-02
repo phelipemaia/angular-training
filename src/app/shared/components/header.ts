@@ -9,7 +9,7 @@ import { AuthService } from './services/auth.service';
     styleUrls: [
         './template.css'
     ],
-    template: './header.html',
+    templateUrl: './header.html',
     providers: [AuthService]
 })
 
