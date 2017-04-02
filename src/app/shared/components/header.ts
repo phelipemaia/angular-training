@@ -2,21 +2,15 @@ import {
     Component
 } from '@angular/core';
 
+import { AuthService } from './services/auth.service';
+
 @Component({
     selector: 'course-header',
     styleUrls: [
         './template.css'
     ],
-    template: `<div class="header">
-        <div>
-            <img class="logo" src="../../../assets/img/angular-logo.png"/>
-            Courses
-            <div class="logoff-container">
-                <p>user login</p>
-                <p>logoff</p>
-            </div>
-        </div>
-    </div>`
+    template: './header.html',
+    providers: [AuthService]
 })
 
 export class HeaderComponent {

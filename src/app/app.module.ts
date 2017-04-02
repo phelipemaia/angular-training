@@ -29,6 +29,9 @@ import { CourseComponent } from './pages/courses/course';
 import { NoContentComponent } from './pages/no-content';
 import { FooterComponent } from './shared/components/footer';
 import { HeaderComponent } from './shared/components/header';
+import { ConfirmDeleteComponent } from './shared/components/confirm.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ConfirmModule } from 'angular2-bootstrap-confirm';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -56,12 +59,15 @@ type StoreType = {
     CourseComponent,
     FooterComponent,
     NoContentComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConfirmDeleteComponent,
+    LoginComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
     FormsModule,
     HttpModule,
+    ConfirmModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
